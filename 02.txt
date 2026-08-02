@@ -1,0 +1,48 @@
+ques
+A banking application must ensure that customer account details remain secure while allowing only authorized operations such as deposit and withdrawal. Explain how encapsulation and data abstraction can be applied to this application. Illustrate your answer with a suitable class design and implement the solution using a basic C++ program.
+
+answer
+Banking Application Using Encapsulation and Data Abstraction
+1. Introduction
+
+A banking application stores sensitive customer information such as account number, account balance, and customer details. To ensure security and prevent unauthorized access, Object-Oriented Programming (OOP) uses Encapsulation and Data Abstraction.
+
+2. Encapsulation
+
+Definition:
+Encapsulation is the process of binding data and the functions that operate on it into a single unit (class) while restricting direct access to the data using access specifiers.
+
+Application in Banking System
+Account balance is declared as private.
+Account number is also kept private.
+Customers cannot modify their balance directly.
+Balance can only be changed using authorized methods such as:
+Deposit()
+Withdraw()
+Advantages
+Prevents unauthorized access.
+Ensures data security.
+Improves maintainability.
+Prevents accidental modification of account details.
+3. Data Abstraction
+
+Definition:
+Data Abstraction means showing only the necessary information to the user while hiding the internal implementation.
+
+Application in Banking System
+
+The user only needs to know how to:
+
+Deposit money
+Withdraw money
+Check account balance
+
+The internal logic such as balance calculation and validation remains hidden.
+
+Example:
+
+The customer simply calls
+
+account.deposit(5000);
+
+without knowing how the balance is updated internally.
