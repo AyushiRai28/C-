@@ -1,0 +1,45 @@
+ques
+An online payment application supports Credit Card, Debit Card, UPI, and Net Banking payments. Although all payment methods perform the same operation, each follows a different process. Explain how polymorphism can be used to model this system. Implement a basic C++ program using either function overloading or function overriding to demonstrate the concept.
+
+. Introduction
+
+An online payment application allows users to pay using different payment methods such as Credit Card, Debit Card, UPI, and Net Banking. Although all methods perform the same task (making a payment), each follows a different process.
+
+This can be efficiently implemented using Polymorphism, where the same function behaves differently for different objects.
+
+2. What is Polymorphism?
+
+Definition:
+
+Polymorphism is an Object-Oriented Programming (OOP) concept that allows one function to perform different tasks depending on the object or parameters used.
+
+There are two types:
+
+Compile-Time Polymorphism (Function Overloading)
+Run-Time Polymorphism (Function Overriding)
+
+In this example, we use Function Overriding (Run-Time Polymorphism).
+
+3. Need for Polymorphism
+
+Without polymorphism:
+
+Separate functions are needed for each payment method.
+Code duplication increases.
+Adding a new payment method becomes difficult.
+
+With polymorphism:
+
+A common function pay() is defined in the base class.
+Each payment method provides its own implementation.
+The program becomes flexible and easy to extend.
+4. Class Hierarchy
+                 Payment
+             ----------------
+             + pay()
+             ----------------
+              /    |     |     \
+             /     |     |      \
+            /      |     |       \
+     CreditCard DebitCard UPI NetBanking
+          pay()      pay() pay()    pay()

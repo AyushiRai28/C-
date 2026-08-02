@@ -1,0 +1,55 @@
+An educational institution manages Students, Faculty, and Administrative Staff, all of whom share common information such as name and ID but also possess unique attributes. Analyze how inheritance can improve the design of this system. Draw an appropriate class hierarchy and implement the solution using a C++ program.
+ques
+An educational institution manages Students, Faculty, and Administrative Staff, all of whom share common information such as name and ID but also possess unique attributes. Analyze how inheritance can improve the design of this system. Draw an appropriate class hierarchy and implement the solution using a C++ program.
+
+answer
+Inheritance in an Educational Institution Management System
+1. Introduction
+
+In an educational institution, Students, Faculty, and Administrative Staff share common information such as Name and ID, but each also has unique attributes and responsibilities.
+
+Instead of writing the same code repeatedly for each type of person, Inheritance allows us to create a common base class and derive specialized classes from it. This reduces code duplication and improves maintainability.
+
+2. What is Inheritance?
+
+Definition:
+
+Inheritance is an Object-Oriented Programming (OOP) concept in which one class (derived class) acquires the properties and functions of another class (base class).
+
+Syntax:
+
+class DerivedClass : public BaseClass
+{
+    // Additional members
+};
+3. Need for Inheritance in the Institution System
+
+Without inheritance:
+
+The classes Student, Faculty, and AdminStaff would each contain duplicate fields such as name and ID.
+Any change to these common attributes would have to be made in multiple places.
+The program becomes difficult to maintain and extend.
+
+With inheritance:
+
+Common data is placed in a single Person class.
+Specialized classes inherit common features and add their own attributes.
+Code becomes reusable, organized, and easier to maintain.
+
+                    Person
+          -------------------------
+          - name
+          - id
+          -------------------------
+          + getPersonData()
+          + displayPerson()
+                 /   |   \
+                /    |    \
+               /     |     \
+          Student Faculty AdminStaff
+         ---------- -------- ----------
+         - course   - subject - department
+         - semester - salary  - designation
+         ---------- -------- ----------
+         + getData() + getData() + getData()
+         + display() + display() + display()

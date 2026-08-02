@@ -1,0 +1,44 @@
+A software company is developing a small calculator application. Evaluate whether object-oriented programming is the most suitable approach for this application by discussing its merits and demerits. Support your conclusion with a simple C++ implementation using classes and objects.
+
+answer
+Object-Oriented Programming for a Calculator Application
+1. Introduction
+
+A calculator application performs basic arithmetic operations such as addition, subtraction, multiplication, and division. It can be developed using either procedural programming or object-oriented programming (OOP).
+
+For a small calculator, OOP is not strictly necessary, but it provides better organization and makes the program easier to extend.
+
+2. Merits of Using OOP
+Code Reusability
+Functions are grouped into a class and can be reused.
+Modularity
+Data and functions are organized within a class, making the program easier to understand.
+Easy Maintenance
+Changes can be made in one class without affecting the entire program.
+Scalability
+New operations such as square root, power, or logarithm can be added easily.
+Data Security
+Data members can be kept private using encapsulation.
+3. Demerits of Using OOP
+More Code
+Requires classes and objects, making the program longer than a procedural approach.
+Higher Memory Usage
+Objects consume additional memory.
+Slower Development for Small Programs
+Creating classes for a simple calculator may be unnecessary.
+Learning Complexity
+Beginners may find OOP concepts difficult.
+4. Evaluation
+
+For a small calculator with only basic arithmetic operations, procedural programming is sufficient because it is simple and requires less code.
+
+However, if the calculator is expected to support scientific calculations, memory functions, history, or a graphical interface, then object-oriented programming is a better choice due to its modularity, reusability, and scalability.
+
+5. Class Design
+            Calculator
+        -------------------
+        + add()
+        + subtract()
+        + multiply()
+        + divide()
+        -------------------
