@@ -1,0 +1,39 @@
+A scientific calculator repeatedly performs simple mathematical operations such as finding the square of a number and calculating powers with optional parameters. Analyze how inline functions and default arguments can improve program efficiency and readability. Write a C++ program demonstrating both concepts and explain the expected output.
+
+answer
+Inline Functions and Default Arguments in a Scientific Calculator
+1. Introduction
+
+A scientific calculator performs operations such as finding the square of a number and calculating powers. In C++, inline functions and default arguments help make such programs more efficient and readable.
+
+2. Inline Function
+
+Definition:
+
+An inline function is a function in which the compiler replaces the function call with the actual function code during compilation.
+
+Syntax:
+
+inline return_type function_name(parameters)
+{
+    // function body
+}
+Advantages
+Reduces function call overhead.
+Improves execution speed for small functions.
+Makes the program efficient.
+Limitation
+Best suited for small functions. Large functions should not be declared as inline.
+3. Default Arguments
+
+Definition:
+
+Default arguments are values assigned to function parameters. If the user does not provide an argument, the default value is used automatically.
+
+Syntax:
+
+return_type function_name(parameter = default_value);
+Advantages
+Reduces the need for multiple overloaded functions.
+Makes function calls simpler.
+Improves code readability.

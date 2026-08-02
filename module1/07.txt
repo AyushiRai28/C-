@@ -1,0 +1,54 @@
+ques
+A payroll application requires employee salary details to be updated directly by functions without creating unnecessary copies of data. Explain the concepts of independent reference, pass-by-reference, and function returning reference in C++. Develop a C++ program that updates salary using pass-by-reference and returns a reference to the highest salary for modification.
+
+answer
+
+. Introduction
+
+A payroll application frequently updates employee salaries. Passing large data by value creates unnecessary copies, which increases memory usage and execution time. References in C++ allow functions to work directly with the original data, making programs more efficient.
+
+2. Independent Reference
+
+Definition:
+
+An independent reference is a reference variable that acts as another name (alias) for an existing variable.
+
+Syntax:
+
+int salary = 50000;
+int &refSalary = salary;
+
+Here, refSalary and salary refer to the same memory location. Any change made through refSalary changes salary.
+
+3. Pass-by-Reference
+
+Definition:
+
+In pass-by-reference, a function receives a reference to the original variable instead of a copy. Therefore, any modifications inside the function directly affect the original variable.
+
+Syntax:
+
+void updateSalary(int &salary)
+{
+    salary = salary + 5000;
+}
+Advantages
+No copy of data is created.
+Faster execution.
+Saves memory.
+Changes are reflected in the original variable.
+4. Function Returning Reference
+
+Definition:
+
+A function can return a reference to a variable instead of returning its value. This allows the returned variable to be modified directly.
+
+Syntax:
+
+int& highestSalary(int &a, int &b)
+{
+    if(a > b)
+        return a;
+    else
+        return b;
+}
