@@ -1,0 +1,41 @@
+ A college plans to replace its existing procedural student record system with an object-oriented system. Analyze the limitations of the procedural approach and justify the need for object-oriented programming. Design suitable classes and objects for the system, and write a basic C++ program to demonstrate their implementation.
+
+answer
+
+1. Limitations of the Procedural Approach
+In a procedural programming approach, the program is divided into functions, and data is often shared globally. This creates several problems in a student record management system.
+
+Limitations -
+No Data Security
+Data is usually stored in global variables.
+Any function can modify student records, increasing the chances of errors.
+Poor Code Reusability
+Functions written for one purpose are difficult to reuse in other applications.
+Difficult Maintenance
+As the system grows, updating or debugging becomes complicated.
+Lack of Data Hiding
+Student details such as marks or fees are directly accessible from anywhere in the program.
+No Real-World Representation
+Procedural programming focuses on functions rather than real-world entities like Student, Teacher, or Course.
+Scalability Issues
+Adding new features such as attendance, hostel management, or library records requires major changes
+
+2. Need for Object-Oriented Programming (OOP)
+
+Object-Oriented Programming organizes programs into objects that contain both data and functions.
+
+Advantages
+Encapsulation
+Protects student information by keeping data private.
+Data Abstraction
+Shows only necessary details to users.
+Inheritance
+Allows creation of specialized classes such as UndergraduateStudent and PostgraduateStudent.
+Polymorphism
+Enables the same function to work differently for different objects.
+Code Reusability
+Existing classes can be reused in future projects.
+Easy Maintenance
+Changes in one class have minimal effect on others.
+Real-World Modeling
+Objects represent real entities like Student, Teacher, Department, etc.
