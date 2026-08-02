@@ -1,0 +1,124 @@
+ques
+An e-commerce application manages Customers, Products, and Orders. Design an object-oriented solution by identifying appropriate classes, objects, data members, and member functions. Explain how encapsulation, abstraction, and inheritance improve the overall design. Implement a basic C++ program illustrating your proposed solution.
+
+answer
+Object-Oriented Design for an E-Commerce Application
+1. Introduction
+
+An e-commerce application manages Customers, Products, and Orders. These entities have different properties and behaviors but work together to complete online shopping. Using Object-Oriented Programming (OOP) makes the application modular, secure, reusable, and easy to maintain.
+
+2. Classes and Objects
+Classes
+Customer
+
+Data Members
+
+Customer ID
+Name
+
+Member Functions
+
+getCustomer()
+displayCustomer()
+Product
+
+Data Members
+
+Product ID
+Product Name
+Price
+
+Member Functions
+
+getProduct()
+displayProduct()
+Order
+
+Data Members
+
+Order ID
+Quantity
+
+Member Functions
+
+getOrder()
+displayOrder()
+Objects
+Customer c1
+Product p1
+Order o1
+3. Class Hierarchy
+                  Person
+               ----------------
+               - id
+               - name
+               ----------------
+               + getData()
+               + display()
+                      |
+                 Customer
+               ----------------
+               + getCustomer()
+               + displayCustomer()
+
+Product
+----------------
+- productId
+- productName
+- price
+----------------
++ getProduct()
++ displayProduct()
+
+Order
+----------------
+- orderId
+- quantity
+----------------
++ getOrder()
++ displayOrder()
+4. OOP Concepts Used
+(a) Encapsulation
+
+Definition:
+Encapsulation is the process of binding data and functions into a single class while restricting direct access using private data members.
+
+Application
+
+Customer ID, Product Price, and Order Quantity are kept private.
+Data can only be accessed through public member functions.
+
+Benefits
+
+Protects data.
+Prevents unauthorized modification.
+Improves security.
+(b) Abstraction
+
+Definition:
+Abstraction hides the internal implementation and exposes only the required functionalities.
+
+Application
+
+The user interacts only with functions like:
+getCustomer()
+displayProduct()
+displayOrder()
+
+The internal storage of data remains hidden.
+
+(c) Inheritance
+
+Definition:
+Inheritance allows one class to acquire the properties and functions of another class.
+
+Application
+
+Customer inherits common attributes (id and name) from the Person class.
+This avoids duplication of common code.
+
+Benefits
+
+Code reusability.
+Reduced redundancy.
+Easy maintenance.

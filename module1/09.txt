@@ -1,0 +1,71 @@
+A hospital management system requires patient information to remain confidential while allowing doctors and administrators to access different functionalities. Analyze which object-oriented characteristics are most suitable for this application and justify your choices. Develop a C++ program that demonstrates at least two OOP concepts in your proposed design.
+
+answer
+Hospital Management System Using Object-Oriented Programming
+1. Introduction
+
+A hospital management system stores confidential patient information while allowing Doctors and Administrators to perform different tasks. Object-Oriented Programming (OOP) provides features that make the system secure, organized, and easy to maintain.
+
+2. Suitable OOP Characteristics
+(a) Encapsulation
+
+Definition:
+Encapsulation is the process of combining data and functions into a single class while restricting direct access to the data.
+
+Application in Hospital Management
+
+Patient details such as Patient ID, Name, and Disease are kept private.
+These details can only be accessed or modified through public member functions.
+
+Advantages
+
+Protects confidential patient information.
+Prevents unauthorized access.
+Improves data security.
+(b) Inheritance
+
+Definition:
+Inheritance allows one class to acquire the properties and functions of another class.
+
+Application in Hospital Management
+
+A common base class Person stores shared information like ID and Name.
+Doctor and Administrator inherit from the Person class and add their own functions.
+
+Advantages
+
+Reduces code duplication.
+Improves code reusability.
+Makes the program easier to maintain.
+(c) Abstraction
+
+Definition:
+Abstraction hides the internal implementation and exposes only the necessary operations.
+
+Application
+
+Users interact through functions such as:
+getPatient()
+displayPatient()
+displayDoctor()
+Internal implementation remains hidden.
+3. Class Hierarchy
+                  Person
+             ----------------
+             # id
+             # name
+             ----------------
+             + getData()
+             + display()
+                 /      \
+                /        \
+           Doctor    Administrator
+
+Patient
+-------------------------
+- patientId
+- patientName
+- disease
+-------------------------
++ getPatient()
++ displayPatient()

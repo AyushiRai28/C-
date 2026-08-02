@@ -1,0 +1,80 @@
+ques
+A vehicle rental company manages Cars, Bikes, and Trucks, where each vehicle shares common properties but calculates rental charges differently. Design an object-oriented model using a base class and appropriate derived classes. Explain how inheritance and polymorphism reduce code duplication and improve maintainability.
+
+answer
+Vehicle Rental System Using Inheritance and Polymorphism
+1. Introduction
+
+A vehicle rental company rents different types of vehicles such as Cars, Bikes, and Trucks. All vehicles have common properties like Vehicle Number and Vehicle Name, but each calculates rental charges differently. This can be efficiently modeled using Inheritance and Polymorphism in Object-Oriented Programming (OOP).
+
+2. Object-Oriented Model
+Base Class: Vehicle
+
+Data Members
+
+Vehicle Number
+Vehicle Name
+
+Member Functions
+
+getData()
+display()
+calculateRent() (virtual function)
+Derived Classes
+Car
+Calculates rent based on ₹1000 per day.
+Bike
+Calculates rent based on ₹500 per day.
+Truck
+Calculates rent based on ₹2000 per day.
+3. Class Hierarchy
+                     Vehicle
+        --------------------------------
+        # vehicleNo
+        # vehicleName
+        --------------------------------
+        + getData()
+        + display()
+        + virtual calculateRent()
+              /         |          \
+             /          |           \
+          Car         Bike        Truck
+      calculateRent() calculateRent() calculateRent()
+4. How Inheritance Reduces Code Duplication
+
+Inheritance allows derived classes to reuse the common properties and functions of the base class.
+
+Without Inheritance
+
+Each class (Car, Bike, and Truck) would separately contain:
+
+Vehicle Number
+Vehicle Name
+getData()
+display()
+
+This leads to repeated code.
+
+With Inheritance
+
+The common code is written only once in the Vehicle class. The derived classes inherit these members and only implement their own rental charge calculation.
+
+Benefits
+
+Code reusability.
+Reduced duplication.
+Easier maintenance.
+5. How Polymorphism Improves Maintainability
+
+Polymorphism allows the same function (calculateRent()) to perform different tasks depending on the object.
+
+Car calculates rent differently from Bike.
+Bike calculates rent differently from Truck.
+
+Using a base class pointer, the correct calculateRent() function is called at run time.
+
+Benefits
+
+One common interface for all vehicle types.
+Easy to add new vehicle types (e.g., Bus or Van).
+Existing code does not need modification.
