@@ -1,0 +1,46 @@
+
+A library management system stores multiple Book objects inside a Library object. Explain the concept of a container class and analyze how it differs from inheritance. Design suitable classes and implement a C++ program that demonstrates a container class managing multiple obje
+
+answer
+Container Class in a Library Management System
+1. Introduction
+
+A Library Management System stores multiple Book objects inside a Library object. This relationship is an example of a Container Class, where one class contains objects of another class.
+
+2. What is a Container Class?
+
+Definition:
+
+A Container Class is a class that contains one or more objects of another class as its data members.
+
+It represents a "has-a" relationship.
+
+Example
+A Library has Books.
+A School has Students.
+A Company has Employees.
+3. Container Class vs Inheritance
+Container Class	Inheritance
+Represents a has-a relationship.	Represents an is-a relationship.
+One class contains objects of another class.	One class inherits another class.
+Promotes object composition.	Promotes code reuse through inheritance.
+Example: Library has Books.	Example: Car is a Vehicle.
+Objects work independently.	Derived class depends on the base class.
+4. Class Design
+                Book
+--------------------------------
+- bookId
+- bookName
+--------------------------------
++ getData()
++ display()
+
+                 ▲
+                 │ (has-a)
+                 │
+              Library
+--------------------------------
+- Book books[5]
+--------------------------------
++ getBooks()
++ displayBooks()

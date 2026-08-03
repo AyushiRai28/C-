@@ -1,0 +1,46 @@
+ques
+A programmer has designed a data structure using a struct to represent student records. As the project grows, the program requires data hiding, constructors, and member functions. Analyze the limitations of using a structure in this scenario and justify whether it should be replaced by a class. Demonstrate your solution with a C++ implementation.
+
+
+answer
+Structure vs Class in a Student Record System
+1. Introduction
+
+A programmer initially uses a structure (struct) to store student records. As the project grows, the application requires data hiding, constructors, and member functions. In such cases, using a class is more suitable than a structure because it supports the principles of Object-Oriented Programming (OOP).
+
+2. Limitations of Using a Structure
+No Data Hiding
+Members of a structure are public by default.
+Any part of the program can directly access or modify the data.
+Poor Data Security
+Sensitive information such as marks or fees cannot be protected.
+Limited OOP Features
+Structures are mainly used for grouping data and are not ideal for implementing OOP concepts like encapsulation.
+Less Suitable for Large Projects
+As the program grows, maintaining and managing data becomes difficult.
+No Controlled Access
+Data cannot be accessed through authorized methods unless additional coding is done.
+3. Why Replace struct with class?
+
+A class provides several advantages:
+
+Data Hiding: Data members can be declared private.
+Encapsulation: Data and functions are combined into one unit.
+Constructors: Objects can be initialized automatically.
+Member Functions: Provide controlled access to data.
+Better Security: Prevents unauthorized modification.
+Scalability: Easier to add new features in the future.
+
+Hence, replacing the structure with a class is the better choice for a growing student management system.
+
+4. Class Design
+              Student
+----------------------------------
+- rollNo : int
+- name : string
+- marks : float
+----------------------------------
++ Student()
++ getData()
++ displayData()
+----------------------------------

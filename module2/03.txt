@@ -1,0 +1,40 @@
+ques
+An online shopping application creates multiple product objects during execution. Explain the role of constructors in object initialization and analyze the consequences of not defining a constructor. Write a C++ program demonstrating the use of parameterized constructors for initializing product details
+
+answer
+Constructors in an Online Shopping Application
+1. Introduction
+
+In an online shopping application, many Product objects are created during program execution. Each product has details such as Product ID, Product Name, and Price. A constructor initializes these details automatically when an object is created.
+
+2. What is a Constructor?
+
+Definition:
+
+A constructor is a special member function of a class that is automatically called when an object is created. It is mainly used to initialize the data members of an object.
+
+Characteristics
+Has the same name as the class.
+Has no return type (not even void).
+Invoked automatically when an object is created.
+Used to initialize object data.
+3. Role of Constructors in Object Initialization
+Automatically initializes object data at the time of creation.
+Reduces the need for separate initialization functions.
+Ensures every object starts with valid values.
+Makes the code cleaner and easier to maintain.
+4. Consequences of Not Defining a Constructor
+Data members may remain uninitialized, leading to unpredictable (garbage) values.
+The programmer must initialize every object manually after creation.
+There is a greater chance of errors due to forgotten initialization.
+The code becomes less organized and harder to maintain.
+5. Parameterized Constructor
+
+A parameterized constructor accepts arguments and initializes the object with user-defined values.
+
+Syntax:
+
+ClassName(data_type parameter1, data_type parameter2)
+{
+    // Initialization
+}

@@ -1,0 +1,39 @@
+A hospital management system creates patient records only when new patients arrive and deletes them after discharge to optimize memory usage. Analyze why dynamic object creation is more appropriate than static object creation in this situation. Implement a C++ program using dynamic objects and explain the memory allocation and deallocation process.
+
+answer
+Dynamic Object Creation in a Hospital Management System
+1. Introduction
+
+A hospital management system creates patient records only when new patients arrive and removes them after discharge. Since the number of patients changes continuously, dynamic object creation is more suitable than static object creation because memory is allocated only when required and released after use.
+
+2. Static Object Creation
+
+Definition:
+A static object is created normally without using new.
+
+Example:
+
+Patient p;
+Disadvantages
+Memory is allocated even if the object is not required.
+Less flexible when the number of objects is unknown.
+Can waste memory.
+3. Dynamic Object Creation
+
+Definition:
+A dynamic object is created using the new operator and deleted using the delete operator.
+
+Syntax:
+
+Patient *p = new Patient();
+delete p;
+Advantages
+Memory is allocated only when needed.
+Efficient memory utilization.
+Suitable when the number of objects is not fixed.
+Memory can be released after use.
+4. Why Dynamic Objects are Better for a Hospital Management System
+Patients arrive and leave at different times.
+The number of patient records is unpredictable.
+Dynamic objects allocate memory only for active patients.
+After discharge, memory is freed using delete, preventing memory wastage.

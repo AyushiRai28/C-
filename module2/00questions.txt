@@ -1,0 +1,35 @@
+A software company is developing an Employee Management System where employee information should be accessible only through authorized methods. Design an appropriate class by selecting suitable access specifiers for different data members and member functions. Justify your choice of access specifiers and implement the solution using a basic C++ program.
+
+
+A programmer has designed a data structure using a struct to represent student records. As the project grows, the program requires data hiding, constructors, and member functions. Analyze the limitations of using a structure in this scenario and justify whether it should be replaced by a class. Demonstrate your solution with a C++ implementation.
+
+
+An online shopping application creates multiple product objects during execution. Explain the role of constructors in object initialization and analyze the consequences of not defining a constructor. Write a C++ program demonstrating the use of parameterized constructors for initializing product details.
+
+
+A university examination system creates and destroys several temporary objects while processing student results. Analyze the importance of destructors in memory management and resource cleanup. Implement a C++ program that demonstrates the execution sequence of constructors and destructors and explain the output.
+
+
+A graphics application stores information about geometric shapes and frequently creates duplicate objects for editing operations. Explain the need for a copy constructor and analyze the problems that may arise if the default copy constructor is used in applications involving dynamic memory allocation. Develop a C++ program illustrating the use of a copy constructor.
+
+
+A company needs to maintain information for 100 employees using object-oriented programming. Compare the use of individual objects with an array of objects for this requirement. Design a suitable class and implement a C++ program that accepts and displays employee details using an array of objects.
+
+
+A hospital management system creates patient records only when new patients arrive and deletes them after discharge to optimize memory usage. Analyze why dynamic object creation is more appropriate than static object creation in this situation. Implement a C++ program using dynamic objects and explain the memory allocation and deallocation process.
+
+
+Describe  and how they are created and managed in C++.  Two classes, Student and Result, need to share confidential information without exposing data to all member functions. Evaluate whether a friend function or a friend class is more appropriate for this requirement. Justify your answer and implement a basic C++ program demonstrating both concepts.  
+
+A library management system stores multiple Book objects inside a Library object. Explain the concept of a container class and analyze how it differs from inheritance. Design suitable classes and implement a C++ program that demonstrates a container class managing multiple objects.
+
+
+A vehicle service management system requires object initialization, secure access to data, dynamic memory allocation, and sharing of private data between related classes. Design a complete object-oriented solution incorporating constructors, destructors, access specifiers, dynamic objects, friend functions or friend classes, and a container class wherever appropriate. Implement the basic C++ program and critically evaluate how each feature contributes to the overall design, maintainability, and efficiency of the system.
+
+
+Define an inline function and justify how it can reduce program execution time. Discuss the advantages and restrictions of inline functions. Write a C++ program demonstrating the use of inline functions to perform arithmetic operations and explain its output. Also, explain the concept of default arguments, describing how they reduce the need for function overloading and improve code readability. Illustrate your explanation with a suitable C++ program and explain its output.  
+
+
+
+Write a C++ program to demonstrate function overloading. Create function area() that calculates area of circle, triangle and box.
+

@@ -1,0 +1,46 @@
+1A vehicle service management system requires object initialization, secure access to data, dynamic memory allocation, and sharing of private data between related classes. Design a complete object-oriented solution incorporating constructors, destructors, access specifiers, dynamic objects, friend functions or friend classes, and a container class wherever appropriate. Implement the basic C++ program and critically evaluate how each feature contributes to the overall design, maintainability, and efficiency of the system.
+
+answer
+Vehicle Service Management System Using OOP Concepts
+1. Introduction
+
+A Vehicle Service Management System stores vehicle details, performs servicing operations, and manages multiple vehicles efficiently. The system requires constructors, destructors, access specifiers, dynamic objects, friend classes/functions, and a container class to make it secure, reusable, and easy to maintain.
+
+2. OOP Features Used
+(a) Constructor
+Initializes vehicle details automatically when an object is created.
+(b) Destructor
+Releases resources when an object is destroyed.
+(c) Access Specifiers
+Private: Protects confidential data.
+Public: Allows controlled access through member functions.
+(d) Dynamic Object
+Uses new and delete for efficient memory management.
+(e) Friend Class
+Allows the Service class to access private data of the Vehicle class.
+(f) Container Class
+The Garage class stores multiple Vehicle objects.
+3. Class Design
+                   Vehicle
+------------------------------------------------
+- vehicleNo
+- ownerName
+------------------------------------------------
++ Vehicle()          (Constructor)
++ getData()
++ display()
++ ~Vehicle()         (Destructor)
+------------------------------------------------
+        ▲
+        │ friend
+        │
+     Service
+-----------------------
++ showService()
+
+Garage
+-----------------------
+- Vehicle vehicles[2]
+-----------------------
++ getVehicles()
++ displayVehicles()

@@ -1,0 +1,48 @@
+ques
+A graphics application stores information about geometric shapes and frequently creates duplicate objects for editing operations. Explain the need for a copy constructor and analyze the problems that may arise if the default copy constructor is used in applications involving dynamic memory allocation. Develop a C++ program illustrating the use of a copy constructor.
+
+answer
+Copy Constructor in a Graphics Application
+1. Introduction
+
+A graphics application stores information about geometric shapes such as circles, rectangles, and triangles. During editing operations, duplicate objects are often created. A copy constructor is used to create a new object as an exact copy of an existing object.
+
+2. What is a Copy Constructor?
+
+Definition:
+
+A copy constructor is a special constructor that initializes one object using another object of the same class.
+
+Syntax:
+
+ClassName(const ClassName &obj)
+{
+    // Copy data members
+}
+3. Need for a Copy Constructor
+Creates a duplicate of an existing object.
+Initializes a new object with the values of another object.
+Avoids writing separate code to copy each data member.
+Used when objects are passed or returned by value.
+Ensures proper copying of dynamically allocated memory.
+4. Default Copy Constructor
+
+If the programmer does not define a copy constructor, the C++ compiler automatically provides a default copy constructor.
+
+It performs a shallow copy, meaning it copies the values of data members, including memory addresses of pointers.
+
+5. Problems with the Default Copy Constructor (Dynamic Memory)
+
+When a class contains dynamic memory (using new), the default copy constructor can cause problems because it performs a shallow copy.
+
+Problems
+Shared Memory
+Both objects point to the same memory location.
+Data Modification Issues
+Changing data through one object also affects the other object.
+Double Deletion
+When both objects are destroyed, they try to free the same memory, causing runtime errors.
+Memory Corruption
+Can lead to crashes or undefined behavior.
+
+To avoid these issues, a user-defined copy constructor performs a deep copy, allocating separate memory for each object.

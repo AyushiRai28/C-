@@ -1,0 +1,69 @@
+Describe  and how they are created and managed in C++.  Two classes, Student and Result, need to share confidential information without exposing data to all member functions. Evaluate whether a friend function or a friend class is more appropriate for this requirement. Justify your answer and implement a basic C++ program demonstrating both concepts. 
+
+answer
+
+Friend Function and Friend Class in C++
+1. What are Friend Functions and Friend Classes?
+Friend Function
+
+A friend function is a function that is not a member of a class but is allowed to access the private and protected members of that class.
+
+It is declared using the friend keyword inside the class.
+
+Syntax:
+
+class ClassName
+{
+    friend void functionName();
+};
+Friend Class
+
+A friend class is a class whose all member functions can access the private and protected members of another class.
+
+Syntax:
+
+class A
+{
+    friend class B;
+};
+2. Creation and Management in C++
+Friend Function
+Declared inside the class using the friend keyword.
+Defined outside the class like a normal function.
+Not called using an object.
+Can access private and protected members directly.
+Friend Class
+Declared using friend class.
+All member functions of the friend class can access private data.
+Used when two classes need to work closely together.
+3. Which is More Appropriate?
+
+In this case, Student and Result need to share confidential information.
+
+Friend Function
+
+Use a friend function when:
+
+Only one or two functions need access to private data.
+Limited access is required.
+Better security because only specific functions can access the data.
+Friend Class
+
+Use a friend class when:
+
+Many member functions of another class need access.
+The two classes are closely related.
+Easier to manage if extensive interaction is required.
+Justification
+
+For the given requirement, Friend Class is more appropriate because the Result class is likely to have multiple functions (calculate result, display result, assign grade, etc.) that need access to the student's confidential information. Declaring the entire Result class as a friend avoids repeatedly declaring individual friend functions.
+
+6. Difference Between Friend Function and Friend Class
+Friend Function	Friend Class
+Only one function gets access to private members.	All member functions of the friend class get access.
+More secure because access is limited.	Less secure because the entire class gets access.
+Suitable when only one operation needs access.	Suitable when many operations need access.
+Declared using friend before a function.	Declared using friend class.
+7. Conclusion
+
+Friend functions and friend classes provide controlled access to the private members of a class without making them public. A friend function is suitable when only a single function needs access, whereas a friend class is more appropriate when an entire class requires access to another class's private data. For the Student–Result system, a friend class is the better choice because the Result class may contain multiple functions that need to access confidential student information, resulting in a cleaner and more maintainable design.

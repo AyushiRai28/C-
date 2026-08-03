@@ -1,0 +1,21 @@
+Write a C++ program to demonstrate function overloading. Create function area() that calculates area of circle, triangle and box.
+
+anns
+
+Function Overloading Program to Calculate Area of Circle, Triangle, and Box (Rectangle)
+
+Function Overloading means creating multiple functions with the same name but different parameters. The compiler decides which function to call based on the number and type of arguments.
+
+Sample Output
+Enter Radius of Circle: 7
+Enter Base and Height of Triangle: 10 5
+Enter Length and Width of Box(Rectangle): 8 6
+
+Area of Circle = 153.86
+Area of Triangle = 25
+Area of Box(Rectangle) = 48
+Explanation
+area(float r) calculates the area of a circle.
+area(float b, float h) calculates the area of a triangle.
+area(int l, int w) calculates the area of a box (rectangle).
+All three functions have the same name (area) but different parameter lists, demonstrating function overloading.

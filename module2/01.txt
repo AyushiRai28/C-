@@ -1,0 +1,68 @@
+A software company is developing an Employee Management System where employee information should be accessible only through authorized methods. Design an appropriate class by selecting suitable access specifiers for different data members and member functions. Justify your choice of access specifiers and implement the solution using a basic C++ program.
+
+answer
+Employee Management System Using Access Specifiers
+1. Introduction
+
+An Employee Management System stores employee information such as Employee ID, Name, and Salary. Since this information is confidential, it should only be accessed or modified through authorized methods. C++ provides access specifiers (private, protected, and public) to control access to class members.
+
+2. Access Specifiers
+(a) Private
+
+Definition:
+Private members can only be accessed within the same class.
+
+Application
+
+Employee ID
+Employee Name
+Employee Salary
+
+These are kept private to protect sensitive employee information.
+
+Reason
+
+Prevents unauthorized access.
+Ensures data security.
+Supports encapsulation.
+(b) Public
+
+Definition:
+Public members can be accessed from anywhere in the program.
+
+Application
+
+getData()
+displayData()
+updateSalary()
+
+These functions provide authorized access to the private data.
+
+Reason
+
+Allows controlled access to employee information.
+Users interact with the object through these functions.
+(c) Protected
+
+Definition:
+Protected members can be accessed within the class and by its derived classes.
+
+Application
+
+Useful if classes such as Manager or Developer inherit from Employee.
+
+Reason
+
+Promotes code reuse through inheritance.
+Not directly accessible from outside the class.
+3. Class Design
+                Employee
+-----------------------------------
+- empId : int
+- empName : string
+- salary : float
+-----------------------------------
++ getData()
++ updateSalary()
++ displayData()
+-----------------------------------

@@ -1,0 +1,70 @@
+Define an inline function and justify how it can reduce program execution time. Discuss the advantages and restrictions of inline functions. Write a C++ program demonstrating the use of inline functions to perform arithmetic operations and explain its output. Also, explain the concept of default arguments, describing how they reduce the need for function overloading and improve code readability. Illustrate your explanation with a suitable C++ program and explain its output.  
+
+answer
+Inline Function and Default Arguments in C++
+Part A: Inline Function
+1. Definition
+
+An inline function is a function in which the compiler replaces the function call with the actual function code during compilation. This eliminates the overhead of a function call for small functions.
+
+Syntax:
+
+inline return_type function_name(parameters)
+{
+    // Function body
+}
+2. How Inline Functions Reduce Program Execution Time
+
+Normally, when a function is called:
+
+Control transfers to the function.
+The function executes.
+Control returns to the calling function.
+
+This process takes extra time.
+
+With an inline function, the compiler inserts the function code directly at the place where it is called, eliminating function call overhead and making execution faster.
+
+3. Advantages of Inline Functions
+Improves execution speed for small functions.
+Eliminates function call overhead.
+Makes code more readable.
+Suitable for frequently used functions.
+Compiler automatically expands the function.
+4. Restrictions (Limitations) of Inline Functions
+Best suited only for small functions.
+Large inline functions increase program size.
+Recursive functions are generally not inlined.
+The compiler may ignore the inline request if the function is too complex.
+
+
+Part B: Default Arguments
+1. Definition
+
+Default arguments are values assigned to function parameters. If the caller does not provide those arguments, the compiler automatically uses the default values.
+
+Syntax:
+
+return_type function(parameter = default_value);
+2. How Default Arguments Reduce Function Overloading
+
+Without default arguments, different versions of the same function are needed.
+
+Example:
+
+display();
+display(int);
+display(int, int);
+
+Using default arguments, all these can be replaced with one function:
+
+display(int a = 10, int b = 20);
+
+Thus, default arguments reduce the need for multiple overloaded functions.
+
+3. Advantages of Default Arguments
+Reduces function overloading.
+Improves code readability.
+Makes function calls simpler.
+Reduces code duplication.
+Easy to maintain.

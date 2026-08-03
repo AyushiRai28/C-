@@ -1,0 +1,44 @@
+question
+A university examination system creates and destroys several temporary objects while processing student results. Analyze the importance of destructors in memory management and resource cleanup. Implement a C++ program that demonstrates the execution sequence of constructors and destructors and explain the output.
+
+
+answer
+Destructors in a University Examination System
+1. Introduction
+
+A university examination system creates temporary objects while processing student results. After these objects are no longer needed, the memory occupied by them should be released. Destructors are used to automatically destroy objects and perform memory or resource cleanup.
+
+2. What is a Destructor?
+
+Definition:
+
+A destructor is a special member function that is automatically called when an object is destroyed. It is mainly used to release memory and clean up resources.
+
+Characteristics
+Has the same name as the class, preceded by a tilde (~).
+Has no return type.
+Takes no arguments.
+Called automatically when an object goes out of scope or the program ends.
+A class can have only one destructor.
+
+Syntax:
+
+~ClassName()
+{
+    // Cleanup code
+}
+3. Importance of Destructors
+Memory Management
+Releases memory occupied by objects.
+Resource Cleanup
+Closes files, releases dynamically allocated memory, and frees other resources.
+Prevents Memory Leaks
+Ensures unused memory is returned to the system.
+Automatic Execution
+No need to call the destructor explicitly.
+Improves Program Reliability
+Ensures proper cleanup before an object is destroyed.
+4. Constructor and Destructor Execution Sequence
+Constructor: Called automatically when an object is created.
+Destructor: Called automatically when the object is destroyed.
+If multiple objects are created, constructors execute in the order of object creation, while destructors execute in the reverse order.

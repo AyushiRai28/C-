@@ -1,0 +1,31 @@
+A company needs to maintain information for 100 employees using object-oriented programming. Compare the use of individual objects with an array of objects for this requirement. Design a suitable class and implement a C++ program that accepts and displays employee details using an array of objects
+
+answer
+Array of Objects in an Employee Management System
+1. Introduction
+
+A company needs to maintain information for 100 employees. Creating separate objects for each employee is difficult and inefficient. Instead, an array of objects allows multiple objects of the same class to be stored and managed easily.
+
+2. Individual Objects vs Array of Objects
+Individual Objects	Array of Objects
+Each employee requires a separate object (e1, e2, e3, ...).	A single array can store multiple employee objects (emp[100]).
+Difficult to manage a large number of objects.	Easy to manage and access using indexes.
+Requires more code.	Requires less code.
+Not suitable for large applications.	Suitable for large applications.
+Data processing is difficult.	Data can be processed easily using loops.
+3. Why Use an Array of Objects?
+Stores information of many employees efficiently.
+Reduces code repetition.
+Easy to access objects using indexes.
+Simplifies input and output using loops.
+Makes the program scalable and maintainable.
+4. Class Design
+                Employee
+-----------------------------------
+- empId : int
+- empName : string
+- salary : float
+-----------------------------------
++ getData()
++ displayData()
+-----------------------------------
