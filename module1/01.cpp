@@ -22,10 +22,10 @@ public:
         cin.ignore();
 
         cout << "Enter Name: ";
-        getline(cin, name);
+        cin >> name;
 
         cout << "Enter Course: ";
-        getline(cin, course);
+        cin >> course;
 
         cout << "Enter Semester: ";
         cin >> semester;
