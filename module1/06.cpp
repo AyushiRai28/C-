@@ -12,7 +12,7 @@ int power(int base, int exp = 2)
 {
     int result = 1;
 
-    for (int i = 1; i <= exp; i++)
+    for (int i = 1; i <= exp ; i++)
     {
         result = result * base;
     }

@@ -10,7 +10,6 @@ A payroll application frequently updates employee salaries. Passing large data b
 2. Independent Reference
 
 Definition:
-
 An independent reference is a reference variable that acts as another name (alias) for an existing variable.
 
 Syntax:

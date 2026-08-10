@@ -10,20 +10,16 @@ This can be efficiently implemented using Polymorphism, where the same function 
 2. What is Polymorphism?
 
 Definition:
-
 Polymorphism is an Object-Oriented Programming (OOP) concept that allows one function to perform different tasks depending on the object or parameters used.
 
 There are two types:
-
 Compile-Time Polymorphism (Function Overloading)
 Run-Time Polymorphism (Function Overriding)
-
 In this example, we use Function Overriding (Run-Time Polymorphism).
 
 3. Need for Polymorphism
 
 Without polymorphism:
-
 Separate functions are needed for each payment method.
 Code duplication increases.
 Adding a new payment method becomes difficult.
