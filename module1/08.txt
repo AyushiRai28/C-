@@ -9,7 +9,7 @@ An e-commerce application manages Customers, Products, and Orders. These entitie
 
 2. Classes and Objects
 Classes
-Customer
+a.Customer
 
 Data Members
 
@@ -20,7 +20,8 @@ Member Functions
 
 getCustomer()
 displayCustomer()
-Product
+
+b.Product
 
 Data Members
 
@@ -32,7 +33,8 @@ Member Functions
 
 getProduct()
 displayProduct()
-Order
+
+c.Order
 
 Data Members
 
@@ -43,6 +45,7 @@ Member Functions
 
 getOrder()
 displayOrder()
+
 Objects
 Customer c1
 Product p1
