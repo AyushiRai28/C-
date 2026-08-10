@@ -9,7 +9,7 @@ A banking application stores sensitive customer information such as account numb
 
 2. Encapsulation
 
-Definition:
+Definition: 
 Encapsulation is the process of binding data and the functions that operate on it into a single unit (class) while restricting direct access to the data using access specifiers.
 
 Application in Banking System
@@ -19,11 +19,13 @@ Customers cannot modify their balance directly.
 Balance can only be changed using authorized methods such as:
 Deposit()
 Withdraw()
+
 Advantages
 Prevents unauthorized access.
 Ensures data security.
 Improves maintainability.
 Prevents accidental modification of account details.
+
 3. Data Abstraction
 
 Definition:
