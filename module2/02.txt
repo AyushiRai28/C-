@@ -9,16 +9,16 @@ Structure vs Class in a Student Record System
 A programmer initially uses a structure (struct) to store student records. As the project grows, the application requires data hiding, constructors, and member functions. In such cases, using a class is more suitable than a structure because it supports the principles of Object-Oriented Programming (OOP).
 
 2. Limitations of Using a Structure
-No Data Hiding
+.No Data Hiding
 Members of a structure are public by default.
 Any part of the program can directly access or modify the data.
-Poor Data Security
+.Poor Data Security
 Sensitive information such as marks or fees cannot be protected.
-Limited OOP Features
+.Limited OOP Features
 Structures are mainly used for grouping data and are not ideal for implementing OOP concepts like encapsulation.
-Less Suitable for Large Projects
+.Less Suitable for Large Projects
 As the program grows, maintaining and managing data becomes difficult.
-No Controlled Access
+.No Controlled Access
 Data cannot be accessed through authorized methods unless additional coding is done.
 3. Why Replace struct with class?
 

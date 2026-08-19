@@ -31,41 +31,41 @@ int main()
 }
 
 
-//friends class
-#include <iostream>
-using namespace std;
+// //friends class
+// #include <iostream>
+// using namespace std;
 
-class Result;
+// class Result;
 
-class Student
-{
-private:
-    int marks;
+// class Student
+// {
+// private:
+//     int marks;
 
-public:
-    Student()
-    {
-        marks = 90;
-    }
+// public:
+//     Student()
+//     {
+//         marks = 90;
+//     }
 
-    friend class Result;
-};
+//     friend class Result;
+// };
 
-class Result
-{
-public:
-    void display(Student s)
-    {
-        cout << "Student Marks = " << s.marks << endl;
-    }
-};
+// class Result
+// {
+// public:
+//     void display(Student s)
+//     {
+//         cout << "Student Marks = " << s.marks << endl;
+//     }
+// };
 
-int main()
-{
-    Student s;
-    Result r;
+// int main()
+// {
+//     Student s;
+//     Result r;
 
-    r.display(s);
+//     r.display(s);
 
-    return 0;
-}
+//     return 0;
+// }
