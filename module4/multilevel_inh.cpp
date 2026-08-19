@@ -4,6 +4,8 @@ using namespace std;
 class p{
     public:
      void display(){
-         cout<< 
+         cout<< "\n person";
      }
-}
+};
+ 
+
