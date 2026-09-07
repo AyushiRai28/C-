@@ -49,8 +49,8 @@ class Stack
 public:
     Stack()
     {
-        top = -1;
-    }
+        top = -1;           //
+        }
 
     void push(T value)
     {
